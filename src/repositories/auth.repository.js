@@ -10,7 +10,7 @@ const createUser = (name, email, password) => {
 
 const searchUser = email => {
   return DB.query(
-    `SELECT *
+    `SELECT id, password
      FROM users
      WHERE email = $1;`,
     [email],
